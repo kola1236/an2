@@ -1,12 +1,23 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "module": "system",
+    "emitDecoratorMetadata": true,
+    "target": "es6",
     "outDir": "./out-tsc/spec",
+    "moduleResolution": "node",
     "types": [
       "jasmine",
       "node"
-    ]
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
   },
+  "exclude": [
+    "node_modules"
+
+  ],
   "files": [
     "src/test.ts",
     "src/polyfills.ts"
